@@ -1,0 +1,210 @@
+body{
+    margin:0 auto;
+    display: flex;
+    font-family: 'goldman';
+    background:linear-gradient(rgba(28, 51, 33, 0.5)0%, #000 100%),url();
+}
+#section{
+    width: 100%;
+    height: 1000px;
+    /*background: red;*/
+    margin: 0px 20px 0px 20px;
+}
+#head{
+    /*background: rgb(106, 106, 218);*/
+    height: 60px;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    color:white;
+}
+
+#cambiarAvion{
+    margin-top: 50px;
+    color: white;
+}
+#A1:hover,#A2:hover,#A3:hover{
+    background: rgb(129, 207, 129);
+}
+#contenedor1{
+    width: 100%;
+    height: 380px;
+    display: grid;
+    grid-template-columns: 62% 38%;
+}
+#contenedorAvion{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.wrapper{
+    width: 400px;
+    height:250px;
+    margin:0% auto;
+    margin-top: 50px;
+}
+
+
+#d{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    height: 40px;
+    width: 220px;
+    margin-top: 0px;
+}
+#d2{
+    display: grid;
+    grid-template-columns: 23% 23% 23% 31%;
+    margin-bottom: -14px;
+
+}
+#d h1{
+    height: 2px;
+    margin-top: 10px;
+}
+
+
+#fii, #thetaa, #psii{
+    height: 20px;
+    width: 50px;
+}
+/*@keyframes animate{
+    from,to{
+        transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }100%{
+        transform:rotateX(90deg);
+    }
+}
+*/
+
+
+/*
+#lat{
+    background: url("imagenes/avionL.png");
+    background-size: 100% 100%;
+    height: 400px;
+}
+
+
+#planta{
+    background: url("imagenes/avionPtransparente.png");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 400px;
+    transform:rotateX(0deg) ;
+}*/
+
+#contenedorControles{
+    /*ackground: red;*/
+}
+#controles{
+    width: 100%;
+    height: 400px;
+    float: right;
+    /*background:skyblue;*/
+}
+#contenedorSlider1, #contenedorSlider2, #contenedorSlider3{
+    margin: 0px 20px 45px 50px;
+    display: flex;
+}
+.slider::after{
+    content: '360';
+    font-family: 'goldman';
+    color:white;
+    font-size: 1.5rem;
+    position: relative;
+    top: 100%;
+}
+.slider::before{
+    font-family: 'goldman';
+    content: '-360';
+    color:white;
+    font-size: 1.5rem;
+    position: relative;
+    top: 100%;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    outline:none;
+    background:#ccc;
+    border-radius: 2rem;
+    box-shadow: 0px 1px 10px 1px rgb(136, 136, 136);
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    appearance: none;
+    width: 10px;
+    height: 30px;
+    background:white;
+    cursor: pointer;
+
+}
+p{
+    color:white;
+}
+#contenedor2{
+    width: 100%;
+    height: 280px;
+    /*background: purple;*/
+    display: BLOCK;
+    font-size: 12px;
+}
+#contenedorMatrices{
+    width: 100%;
+    height: 230px;
+    background: #ccc;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 22%;
+}
+#matriz1,#matriz2,#matriz3{
+   /* background: orange;*/
+    width: 100%;
+    margin-left: 14px;
+    
+}
+#matriz4{
+    margin-left: 20px;
+    
+
+
+}
+.corchete{
+    border-left:solid 3px black;
+    border-right:solid 3px black;
+    width: 200px;
+    
+}
+#contenedorMatrices h1{
+    
+    margin-left: 2rem;
+    margin-right: -2rem;
+}
+ #a11,#a21,#a31,#b11,#b21,#b31,#c11,#c21,#c31,#d11,#d21,#d31{
+    color:green;
+}
+
+#a12,#a22,#a32,#b12,#b22,#b32,#c12,#c22,#c32,#d12,#d22,#d32 {
+    color:blue;
+}
+#a13,#a23, #a33,#b13,#b23,#b33,#c13,#c23, #c33,#d13,#d23, #d33{
+    color:red;
+}
+#contenedorManiobras{
+    width: 100%;
+    height: 200px;
+    /*background:yellow;*/
+}
+#A1,#A2,#A3{
+    text-decoration: none;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 40px;
+    font-family: 'goldman';
+    font-size: 18px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8"/>
+    <title>Angulos de Euler - Bruno Dulanto</title>
+    <link rel ="stylesheet" href="estilos.css"/>
+    <link id ="cambioAvion" rel ="stylesheet" href="css/avion1.css" >
+
+
+     <!--jQuery       -->
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+  <!--gsap-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+
+    <!--gsap-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+
+  <!---slider---------------------------------->
+
+
+         <script type="text/JavaScript" src="angulos.js"></script>
+
+</head> 
+    <body>
+        <section id=section>
+            <header id=head> 
+                <h1 id=titulo>ANGULOS DE EULER - calculadora automática -</h1>
+            </header>
+        <div id=contenedor1>
+
+            <div id=contenedorAvion>
+                <div id = cambiarAvion>
+                    <h1> Cambiar Avión</h1>
+                    <button  id = A1>F-16</button>
+                    <button  id = A2>Yak-130</button>
+                    <button  id = A3>FRX-00</button>
+                </div>
+                <div class="wrapper">
+                    <div id="avion">
+                        <div id="lat"></div>
+                        <div id="planta"></div>
+                    </div>
+                 </div>
+            </div>
+
+            <div id=contenedorControles>
+            <div id=controles>
+                <h1 id="FI"><p>Angulo Φ = <span id ="value1"></span></p></h1> 
+                
+                <div id="contenedorSlider1">
+                   <input type="range"  min="-360" max="360" value="1" id="myRange1" class="slider">
+            </div>
+                
+
+                <h1 id="THETA"><p>Angulo θ = <span id ="value2"></span></p></h1>
+                
+                <div id="contenedorSlider2">
+                    <input type="range"  min="-360" max="360" value="1" id="myRange2" class="slider">
+                </div>
+                <h1 id="PSI"><p>Angulo Ψ = <span id ="value3"></span></p> </h1>
+                
+                <div id="contenedorSlider3">
+                    <input type="range"  min="-360" max="360" value="1" id="myRange3" class="slider">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id=contenedor2>
+            <div id=contenedorMatrices>
+                <div id=matriz1><h1>ALABEO</h1>
+                    <div class=corchete>
+                    <h1><span id ="a11"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id ="a12"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id ="a13"></span></h1>
+                    <h1><span id ="a21"></span>&nbsp; <span id ="a22">cos(Φ)</span>&nbsp;&nbsp; <span id ="a23">sen(Φ)</span></h1>
+                    <h1><span id ="a31"></span>&nbsp; <span id ="a32">-sen(Φ)</span>&nbsp; <span id ="a33">cos(Φ)</span></h1>
+                    </div>
+                    
+                </div>
+                <div id=matriz2><h1>CABECEO</h1>
+                    <div class=corchete>
+                    <h1><span id ="b11">cos(θ)</span>&nbsp;&nbsp;<span id ="b12"></span>&nbsp; <span id ="b13">-sen(θ)</span></h1>
+                    <h1><span id ="b21"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id ="b22"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id ="b23"></span></h1>
+                    <h1><span id ="b31">sen(θ)&nbsp;&nbsp;</span> <span id ="b32"></span>&nbsp;&nbsp; <span id ="b33">cos(θ)</span></h1>
+               </div> 
+            </div>
+                
+                <div id=matriz3><h1>GUIÑADA</h1>
+                    <div class=corchete>
+                    <h1><span id ="c11">cos(Ψ)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id ="c12">sen(Ψ)</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id ="c13"></span></h1>
+                    <h1><span id ="c21">-sen(Ψ)</span>&nbsp;&nbsp;<span id ="c22">cos(Ψ)</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id ="c23"></span></h1>
+                    <h1><span id ="c31"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<span id ="c32"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id ="c33"></span></h1>
+                </div>
+            </div>  
+             
+
+            <div id=matriz4>
+                <div id="d"> <h1><label class="textA">Φ</label></h1><h1><label class="textA2">θ</label></h1><h1><label class="textA3">Ψ</label></h1> </div>
+                    <div id="d2"> <input type="text" id="fii"/><input type="text" id="thetaa"/><input type="text" id="psii"/> <button id=calcular>Calcular</button></div>
+                <div class=corchete>
+                <h1><span id ="d11"></span>&nbsp;&nbsp;<span id ="d12"></span>&nbsp;&nbsp;<span id ="d13"></span></h1>
+                <h1><span id ="d21"></span>&nbsp; <span id ="d22"></span>&nbsp;&nbsp; <span id ="d23"></span></h1>
+                <h1><span id ="d31"></span>&nbsp; <span id ="d32"></span>&nbsp; <span id ="d33"></span></h1>
+                </div>
+        </div>
+        
+            
+        </div>            
+        </div>
+        </div>
+        
+
+</section>
+
+    </body>
+    
+</html>

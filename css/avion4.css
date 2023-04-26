@@ -1,0 +1,30 @@
+#avion #lat{
+    background-image: url("../imagenes/4l.png");
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+    transform:translateZ(0px) translateY(-100px) rotateZ(2deg);
+    height: 250px;
+}
+#avion #planta{
+    background-image: url("../imagenes/4p.png");
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+    transform:rotateX(90deg) translateZ(124px);
+    height: 380px;
+
+}
+#avion{
+    
+    display: block;
+    transform-style: preserve-3d;
+    transform-origin: 220px  110px;
+}
+
+#avion div{
+    position: absolute;
+    width: 400px;
+    margin-top: 50px;
+    height: 350px;
+}
